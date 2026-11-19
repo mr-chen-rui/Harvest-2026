@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cdumo0hd4svgx"]
+
+[ext_resource type="Shader" uid="uid://d2rmtte4gjgoo" path="res://Entities/hit_flash.gdshader" id="1_mv1ah"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3uyv8"]
+shader = ExtResource("1_mv1ah")
+shader_parameter/hit_flash_color = Color(1, 1, 1, 1)
+shader_parameter/hit_flash_on = false
+
+[node name="Player" type="CharacterBody2D"]
+material = SubResource("ShaderMaterial_3uyv8")

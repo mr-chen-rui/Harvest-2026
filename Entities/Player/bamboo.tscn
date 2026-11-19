@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://ultg626hge7t"]
+
+[ext_resource type="SpriteFrames" uid="uid://b4vxrdos3lc4a" path="res://Transitions/Blob/transition.tres" id="1_48j5e"]
+
+[node name="Bamboo" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("1_48j5e")
+animation = &"Untransition"
+frame = 26
+frame_progress = 1.0
