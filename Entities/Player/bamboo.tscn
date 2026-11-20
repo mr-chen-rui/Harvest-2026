@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://ultg626hge7t"]
+
+[sub_resource type="GDScript" id="GDScript_1ipve"]
+script/source = "extends Node2D
+
+var stuck_in_wall : bool = false
+var returning : bool = false
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_48j5e"]
+load_path = "res://.godot/imported/bamboo_still.png-25b2923256472503b0f4143d281d399b.ctex"
+
+[node name="Bamboo" type="Node2D"]
+script = SubResource("GDScript_1ipve")
+
+[node name="Stuck" type="Sprite2D" parent="."]
+position = Vector2(1, -14)
+scale = Vector2(0.5, 0.5)
+texture = SubResource("CompressedTexture2D_48j5e")
