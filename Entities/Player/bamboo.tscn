@@ -1,11 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://ultg626hge7t"]
+[gd_scene load_steps=3 format=3 uid="uid://ultg626hge7t"]
 
-[ext_resource type="SpriteFrames" uid="uid://b4vxrdos3lc4a" path="res://Transitions/Blob/transition.tres" id="1_48j5e"]
+[ext_resource type="Script" uid="uid://bwx7n4o80uspa" path="res://Entities/Player/bamboo.gd" id="1_p78tj"]
+[ext_resource type="Texture2D" uid="uid://d3k6stbwujmwi" path="res://Entities/Player/bamboo_still.png" id="2_0eqah"]
 
 [node name="Bamboo" type="Node2D"]
+script = ExtResource("1_p78tj")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = ExtResource("1_48j5e")
-animation = &"Untransition"
-frame = 26
-frame_progress = 1.0
+[node name="Finished" type="Sprite2D" parent="."]
+position = Vector2(1, -14)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_0eqah")
