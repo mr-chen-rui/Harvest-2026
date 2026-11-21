@@ -52,7 +52,7 @@ func _physics_process(delta: float) -> void:
 		$AnimatedSprite2D.flip_h = true
 		$AnimatedSprite2D.offset.x = -23.78
 		
-	if is_on_floor():
+	if is_on_floor() and velocity.y == 0:
 		if running:
 			$AnimatedSprite2D.play("run")
 		else:
