@@ -1,12 +1,12 @@
 # Hooke's Law
-------
-A game about springs... and grapples
+
+A game about springs... and grapples (and also PIRATE NINJAS!!!)
 
 What is Hooke's law?
 Hooke's law states that a spring exerts force linearly porprotional to how much it has been compressed.
 
 ## Core Gameplay
-------
+
 
 You are a ninja trying to kill the **pirate king**, who have bribed corrupt government official who controls this area.
 Nature is your friend, and using the elasticity from bamboo, and copious amounts of rope, you can finally put your plan into action.
