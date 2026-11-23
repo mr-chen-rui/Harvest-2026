@@ -1,0 +1,35 @@
+[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://bhqw2ep6wenni"]
+
+[ext_resource type="Texture2D" uid="uid://dfxsf2fmo6k8p" path="res://Entities/Player/bamboo_spin/spin0000.png" id="1_a2bmn"]
+[ext_resource type="Texture2D" uid="uid://dtocenic81ywt" path="res://Entities/Player/bamboo_spin/spin0001.png" id="2_s1bnr"]
+[ext_resource type="Texture2D" uid="uid://bsds3p7xa38jw" path="res://Entities/Player/bamboo_spin/spin0003.png" id="3_wicid"]
+[ext_resource type="Texture2D" uid="uid://dgq50l874bduv" path="res://Entities/Player/bamboo_spin/spin0002.png" id="4_bbo7i"]
+[ext_resource type="Texture2D" uid="uid://binrudb3lt62s" path="res://Entities/Player/bamboo.png" id="5_dxilh"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_a2bmn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_s1bnr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_wicid")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_bbo7i")
+}],
+"loop": true,
+"name": &"spin",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_dxilh")
+}],
+"loop": false,
+"name": &"stuck",
+"speed": 5.0
+}]

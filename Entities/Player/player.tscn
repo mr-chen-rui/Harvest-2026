@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://cdumo0hd4svgx"]
+[gd_scene load_steps=7 format=3 uid="uid://cdumo0hd4svgx"]
 
 [ext_resource type="Shader" uid="uid://d2rmtte4gjgoo" path="res://Entities/hit_flash.gdshader" id="1_mv1ah"]
 [ext_resource type="Script" uid="uid://cvrkah4aei7dm" path="res://Entities/Player/player.gd" id="2_3uyv8"]
 [ext_resource type="SpriteFrames" uid="uid://c222uyxke55dp" path="res://Entities/Player/player_anims.tres" id="3_lu8i8"]
+[ext_resource type="PackedScene" uid="uid://ultg626hge7t" path="res://Entities/Player/bamboo.tscn" id="3_tekja"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_3uyv8"]
 shader = ExtResource("1_mv1ah")
@@ -15,7 +16,9 @@ height = 122.0
 
 [node name="Player" type="CharacterBody2D"]
 material = SubResource("ShaderMaterial_3uyv8")
+collision_layer = 9
 script = ExtResource("2_3uyv8")
+bamboo = ExtResource("3_tekja")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_lu8i8")
@@ -25,6 +28,13 @@ shape = SubResource("CapsuleShape2D_lu8i8")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
 sprite_frames = ExtResource("3_lu8i8")
-animation = &"jump"
+animation = &"run_bambooless"
 offset = Vector2(-23.78, -134.43)
 flip_h = true
+
+[node name="Hurtbox" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+shape = SubResource("CapsuleShape2D_lu8i8")

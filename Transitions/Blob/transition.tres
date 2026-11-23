@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=30 format=3 uid="uid://b4vxrdos3lc4a"]
+[gd_resource type="SpriteFrames" load_steps=28 format=3 uid="uid://b4vxrdos3lc4a"]
 
 [ext_resource type="Texture2D" uid="uid://5vw0uiqafhwq" path="res://Transitions/Blob/Raw/0001.png" id="1_444b2"]
 [ext_resource type="Texture2D" uid="uid://fekqyfvimn6k" path="res://Transitions/Blob/Raw/0002.png" id="2_ij4ik"]
@@ -27,12 +27,6 @@
 [ext_resource type="Texture2D" uid="uid://cgw0aqanq83c0" path="res://Transitions/Blob/Raw/0025.png" id="25_qo5fn"]
 [ext_resource type="Texture2D" uid="uid://c2xgjalf3x550" path="res://Transitions/Blob/Raw/0026.png" id="26_48i0h"]
 [ext_resource type="Texture2D" uid="uid://tflx7hdklf0u" path="res://Transitions/Blob/Raw/0027.png" id="27_e8mm3"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gu3xc"]
-load_path = "res://.godot/imported/0028.png-546c7ac55fc1bea263c9baaa1129dc07.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_432gm"]
-load_path = "res://.godot/imported/0029.png-f59d45d3b74a3961f86319a69d3769cd.ctex"
 
 [resource]
 animations = [{
@@ -117,12 +111,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("27_e8mm3")
-}, {
-"duration": 1.0,
-"texture": SubResource("CompressedTexture2D_gu3xc")
-}, {
-"duration": 1.0,
-"texture": SubResource("CompressedTexture2D_432gm")
 }],
 "loop": false,
 "name": &"Transition",

@@ -1,11 +1,14 @@
 extends CharacterBody2D
-
+class_name Player
 
 const SPEED : float = 300.0
 const GRAVITY : Vector2 = Vector2.DOWN * 1000
 const JUMP_VELOCITY : float = -500.0
 const RISING_GRAVITY_MODIFIER : float = 0.75
 const FALL_GRAVITY : Vector2 = Vector2.DOWN * 2000
+const throw_velocity : float = 500
+
+@export var bamboo : PackedScene
 
 var has_bamboo : bool = true
 
@@ -27,8 +30,8 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_released("jump") and velocity.y < 0:
 		velocity.y = JUMP_VELOCITY/4
 	
-	if Input.is_action_pressed("throw") and has_bamboo:
-		throwBamboo()
+	if Input.is_action_just_pressed("throw") and has_bamboo:
+		throw_bamboo()
 		has_bamboo = false
 
 	# Get the input direction and handle the movement/deceleration.
@@ -54,9 +57,15 @@ func _physics_process(delta: float) -> void:
 		
 	if is_on_floor() and velocity.y == 0:
 		if running:
-			$AnimatedSprite2D.play("run")
+			if has_bamboo:
+				$AnimatedSprite2D.play("run")
+			else:
+				$AnimatedSprite2D.play("run_bambooless")
 		else:
-			$AnimatedSprite2D.play("idle")
+			if has_bamboo:
+				$AnimatedSprite2D.play("idle")
+			else:
+				$AnimatedSprite2D.play("idle_bambooless")
 
 	move_and_slide()
 
@@ -66,5 +75,15 @@ func get_jump_gravity() -> Vector2:
 	return FALL_GRAVITY
 	
 
-func throwBamboo():
-	pass
+func throw_bamboo():
+	var bamboo_instance = bamboo.instantiate()
+	bamboo_instance.position = position
+	bamboo_instance.player = self
+	if facing_right:
+		bamboo_instance.velocity = Vector2(throw_velocity,0)
+	else:
+		bamboo_instance.velocity = Vector2(-throw_velocity,0)
+	add_sibling(bamboo_instance)
+
+func play_jump_anim():
+	$AnimatedSprite2D.play("jump")
